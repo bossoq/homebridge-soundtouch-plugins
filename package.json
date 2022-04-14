@@ -33,10 +33,10 @@
   "license": "BSD",
   "dependencies": {
     "homebridge-base-platform": "^1.4.4",
-    "soundtouch-api": "^1.1.0"
+    "soundtouch-api": "^1.1.0",
+    "homebridge": "^1.4.0"
   },
   "devDependencies": {
-    "@types/node": "^17.0.24",
-    "homebridge": "^1.4.0"
+    "@types/node": "^17.0.24"
   }
 }
