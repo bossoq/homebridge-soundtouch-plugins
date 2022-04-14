@@ -1,0 +1,42 @@
+{
+  "name": "homebridge-soundtouch-plugins",
+  "version": "1.0.0",
+  "description": "Homebridge SoundTouch plugins",
+  "main": "dist/index.js",
+  "types": "dist/index.d.js",
+  "keywords": [
+    "homebridge-plugin",
+    "soundtouch",
+    "volume",
+    "lighthub",
+    "speaker",
+    "presets",
+    "switch",
+    "bose"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bossoq/homebridge-soundtouch-plugins.git"
+  },
+  "prettier": {
+    "maxWidth": 80,
+    "tabWidth": 2,
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "es5",
+    "useTabs": false
+  },
+  "engines": {
+    "homebridge": ">=1.0.0"
+  },
+  "author": "Kittipos 'Pos' Wajakajornrit",
+  "license": "BSD",
+  "dependencies": {
+    "homebridge-base-platform": "^1.4.4",
+    "soundtouch-api": "^1.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.24",
+    "homebridge": "^1.4.0"
+  }
+}
