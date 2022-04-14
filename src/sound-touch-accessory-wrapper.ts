@@ -1,19 +1,16 @@
-import { ContentItem, KeyValue, SourceStatus } from 'soundtouch-api'
-import {
-  deviceIsOn,
-  DeviceOnOffListener,
-  SoundTouchDevice,
-} from './sound-touch-device'
-import { SoundTouchVolume } from './sound-touch-volume'
-import { SoundTouchSpeakerVolume } from './sound-touch-speaker-volume'
-import { SoundTouchLightbulbVolume } from './sound-touch-lightbulb-volume'
-import { VolumeMode } from './accessory-config'
-import {
-  callbackify,
-  HomebridgeContextProps,
-  HomebridgeAccessoryWrapper,
-} from 'homebridge-base-platform'
 import { PlatformAccessory, Service } from 'homebridge'
+import { ContentItem, KeyValue, SourceStatus } from 'soundtouch-api'
+import { deviceIsOn } from './sound-touch-device'
+import { SoundTouchVolume } from './sound-touch-volume'
+import { SoundTouchLightbulbVolume } from './sound-touch-lightbulb-volume'
+import { SoundTouchSpeakerVolume } from './sound-touch-speaker-volume'
+import { callbackify, HomebridgeAccessoryWrapper } from './utils'
+import {
+  DeviceOnOffListener,
+  HomebridgeContextProps,
+  SoundTouchDevice,
+  VolumeMode,
+} from './types'
 
 interface SoundTouchSelectedSource {
   readonly sourceItem?: ContentItem

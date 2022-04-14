@@ -1,11 +1,4 @@
 import {
-  AccessoryConfig,
-  GlobalConfig,
-  PresetConfig,
-  SourceConfig,
-  VolumeMode,
-} from './accessory-config'
-import {
   API,
   APIDiscovery,
   compactMap,
@@ -13,39 +6,18 @@ import {
   SourceStatus,
 } from 'soundtouch-api'
 import { apiNotFoundWithName } from './errors'
-import { stringUpperCaseFirst } from './utils'
+import { isVerboseInConfigs, stringUpperCaseFirst } from './utils'
+import {
+  AccessoryConfig,
+  GlobalConfig,
+  PresetConfig,
+  SoundTouchDevice,
+  SoundTouchPreset,
+  SoundTouchSource,
+  SourceConfig,
+  VolumeMode,
+} from './types'
 import { Logging } from 'homebridge'
-import { BaseDevice, isVerboseInConfigs } from 'homebridge-base-platform'
-
-export interface SoundTouchPreset {
-  readonly name: string
-  readonly index: number
-}
-
-export interface SoundTouchSource {
-  readonly name: string
-  readonly source: string
-  readonly account: string
-  readonly enabled: boolean
-}
-
-export interface SoundTouchVolumeSettings {
-  readonly onValue: number
-  readonly maxValue: number
-  readonly unmuteValue: number
-  readonly mode: VolumeMode
-}
-
-export interface SoundTouchDevice extends BaseDevice {
-  readonly api: API
-  readonly model: string
-  readonly verbose: boolean
-  readonly pollingInterval?: number
-  readonly version?: string
-  readonly volumeSettings: SoundTouchVolumeSettings
-  readonly presets: SoundTouchPreset[]
-  readonly sources: SoundTouchSource[]
-}
 
 export const searchAllDevices = async (
   globalConfig: GlobalConfig,
@@ -138,11 +110,6 @@ export const _deviceFromApi = async (
     presets: presets,
     sources: sources,
   }
-}
-
-export interface DeviceOnOffListener {
-  deviceDidTurnOff(updateOn?: boolean, updateVolume?: boolean): Promise<boolean>
-  deviceDidTurnOn(updateOn?: boolean, updateVolume?: boolean): Promise<boolean>
 }
 
 export const deviceIsOn = async (

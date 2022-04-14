@@ -1,14 +1,8 @@
 import { KeyValue, SourceStatus } from 'soundtouch-api'
-import {
-  deviceIsOn,
-  DeviceOnOffListener,
-  SoundTouchDevice,
-} from './sound-touch-device'
-import {
-  callbackify,
-  HomebridgeAccessoryWrapper,
-} from 'homebridge-base-platform'
+import { deviceIsOn } from './sound-touch-device'
+import { callbackify, HomebridgeAccessoryWrapper } from './utils'
 import { Characteristic, Service } from 'homebridge'
+import { DeviceOnOffListener, SoundTouchDevice } from './types'
 
 export abstract class SoundTouchVolume {
   protected readonly device: SoundTouchDevice

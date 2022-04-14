@@ -4,6 +4,9 @@
   "description": "Homebridge SoundTouch plugins",
   "main": "dist/index.js",
   "types": "dist/index.d.js",
+  "scripts": {
+    "build": "rimraf ./dist && tsc"
+  },
   "keywords": [
     "homebridge-plugin",
     "soundtouch",
@@ -27,16 +30,19 @@
     "useTabs": false
   },
   "engines": {
-    "homebridge": ">=1.0.0"
+    "node": ">=14.18.1",
+    "homebridge": ">=1.4.0"
   },
   "author": "Kittipos 'Pos' Wajakajornrit",
-  "license": "BSD",
+  "license": "MIT",
   "dependencies": {
-    "homebridge-base-platform": "^1.4.4",
-    "soundtouch-api": "^1.1.0",
-    "homebridge": "^1.4.0"
+    "soundtouch-api": "^1.1.0"
   },
   "devDependencies": {
-    "@types/node": "^17.0.24"
+    "@types/node": "^17.0.24",
+    "homebridge": "^1.4.0",
+    "rimraf": "^3.0.2",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.3"
   }
 }

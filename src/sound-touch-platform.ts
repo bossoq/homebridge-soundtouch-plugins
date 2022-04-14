@@ -1,17 +1,15 @@
-import { AccessoryConfig, GlobalConfig } from './accessory-config'
-import { SoundTouchAccessoryWrapper } from './sound-touch-accessory-wrapper'
-import {
-  deviceFromConfig,
-  searchAllDevices,
-  SoundTouchDevice,
-} from './sound-touch-device'
-import {
-  HomebridgeAccessoryWrapperConstructor,
-  HomebridgePlatform,
-  PlatformSettings,
-} from 'homebridge-base-platform'
-import { SoundTouchPlatformConfig } from './platform-config'
 import { API, Logging } from 'homebridge'
+import { SoundTouchAccessoryWrapper } from './sound-touch-accessory-wrapper'
+import { deviceFromConfig, searchAllDevices } from './sound-touch-device'
+import { HomebridgePlatform } from './utils'
+import {
+  AccessoryConfig,
+  GlobalConfig,
+  HomebridgeAccessoryWrapperConstructor,
+  PlatformSettings,
+  SoundTouchDevice,
+  SoundTouchPlatformConfig,
+} from './types'
 
 export enum SoundTouchPlatformInfo {
   plugin = 'homebridge-soundtouch-plugins',

@@ -1,7 +1,7 @@
+import { HomebridgeAccessoryWrapper } from './utils'
+import { Characteristic, Service } from 'homebridge'
 import { SoundTouchVolume } from './sound-touch-volume'
-import { HomebridgeAccessoryWrapper } from 'homebridge-base-platform'
-import { SoundTouchDevice } from './sound-touch-device'
-import { Service, Characteristic } from 'homebridge'
+import { SoundTouchDevice } from './types'
 
 export class SoundTouchLightbulbVolume extends SoundTouchVolume {
   protected initService(): Service {
