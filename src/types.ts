@@ -3,14 +3,13 @@ import {
   API,
   Characteristic,
   Logging,
-  PlatformAccessory,
   PlatformConfig,
   Service,
 } from 'homebridge'
 import { Accessory } from 'hap-nodejs'
 import { API as SoundTouchAPI } from 'soundtouch-api'
 
-interface BaseGlobalConfig {
+export interface BaseGlobalConfig {
   readonly verbose?: boolean
 }
 
