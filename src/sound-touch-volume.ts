@@ -72,7 +72,9 @@ export abstract class SoundTouchVolume {
     const volume = await this.device.api.getVolume()
     if (this.device.verbose)
       this.accessoryWrapper.log(
-        `[${this.accessoryWrapper.getDisplayName()}] Volume change to ${volume}`
+        `[${this.accessoryWrapper.getDisplayName()}] Volume change to ${{
+          ...volume,
+        }}`
       )
     return volume.actual
   }
