@@ -193,7 +193,7 @@ export class SoundTouchAccessoryWrapper
     SoundTouchSelectedSource | undefined
   > {
     const nowPlaying = await this.device.api.getNowPlaying()
-    if (nowPlaying.source === SourceStatus.standBy) return undefined
+    if (nowPlaying === undefined) return undefined
     const presets = await this.device.api.getPresets()
     for (const preset of presets) {
       if (
