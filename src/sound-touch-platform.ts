@@ -1,11 +1,13 @@
 import { API, Logging } from 'homebridge'
 import { SoundTouchAccessoryWrapper } from './sound-touch-accessory-wrapper'
 import { deviceFromConfig, searchAllDevices } from './sound-touch-device'
-import { HomebridgePlatform } from './utils'
+import {
+  HomebridgeAccessoryWrapperConstructor,
+  HomebridgePlatform,
+} from './utils'
 import {
   AccessoryConfig,
   GlobalConfig,
-  HomebridgeAccessoryWrapperConstructor,
   PlatformSettings,
   SoundTouchDevice,
   SoundTouchPlatformConfig,

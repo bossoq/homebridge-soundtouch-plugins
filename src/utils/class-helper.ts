@@ -12,7 +12,6 @@ import { Accessory } from 'hap-nodejs'
 import {
   BaseDevice,
   BasePlatformConfig,
-  HomebridgeAccessoryWrapperConstructor,
   HomebridgeContextProps,
   PlatformSettings,
 } from '../types'
@@ -254,4 +253,15 @@ export abstract class HomebridgePlatform<
       )
     }
   }
+}
+
+export type HomebridgeAccessoryWrapperConstructor<
+  AccessoryWrapper extends HomebridgeAccessoryWrapper<Device>,
+  Device extends BaseDevice
+> = {
+  new (
+    context: HomebridgeContextProps,
+    accessory: PlatformAccessory,
+    device: Device
+  ): AccessoryWrapper
 }

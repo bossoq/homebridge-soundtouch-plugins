@@ -112,17 +112,6 @@ export interface PlatformSettings {
   readonly plugin: string
 }
 
-export type HomebridgeAccessoryWrapperConstructor<
-  AccessoryWrapper extends HomebridgeAccessoryWrapper<Device>,
-  Device extends BaseDevice
-> = {
-  new (
-    context: HomebridgeContextProps,
-    accessory: PlatformAccessory,
-    device: Device
-  ): AccessoryWrapper
-}
-
 export interface DeviceOnOffListener {
   deviceDidTurnOff(updateOn?: boolean, updateVolume?: boolean): Promise<boolean>
   deviceDidTurnOn(updateOn?: boolean, updateVolume?: boolean): Promise<boolean>
