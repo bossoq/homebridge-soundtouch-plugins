@@ -1,4 +1,3 @@
-import { HomebridgeAccessoryWrapper } from './utils'
 import {
   API,
   Characteristic,

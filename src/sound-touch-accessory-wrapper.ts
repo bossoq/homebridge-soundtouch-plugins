@@ -169,7 +169,7 @@ export class SoundTouchAccessoryWrapper
   public async setOn(on: boolean, updateOn?: boolean): Promise<boolean> {
     const nowPlaying = await this.device.api.getNowPlaying()
     let success = false
-    if (nowPlaying === undefined) {
+    if (nowPlaying.source === SourceStatus.standBy) {
       if (on) {
         success = await this.device.api.pressKey(KeyValue.power)
         if (!success) return false
@@ -193,7 +193,7 @@ export class SoundTouchAccessoryWrapper
     SoundTouchSelectedSource | undefined
   > {
     const nowPlaying = await this.device.api.getNowPlaying()
-    if (nowPlaying === undefined) return undefined
+    if (nowPlaying.source === SourceStatus.standBy) return undefined
     const presets = await this.device.api.getPresets()
     for (const preset of presets) {
       if (

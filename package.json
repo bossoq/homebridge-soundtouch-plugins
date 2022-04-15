@@ -37,7 +37,7 @@
   "author": "Kittipos 'Pos' Wajakajornrit",
   "license": "MIT",
   "dependencies": {
-    "soundtouch-api": "^1.1.0"
+    "soundtouch-api": "git+https://github.com/bossoq/soundtouch-api.git"
   },
   "devDependencies": {
     "@types/node": "^17.0.24",
