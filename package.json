@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "rimraf ./dist && tsc",
     "build": "tsc",
-    "postinstall": "tsc"
+    "postinstall": "npm install && tsc"
   },
   "keywords": [
     "homebridge-plugin",
