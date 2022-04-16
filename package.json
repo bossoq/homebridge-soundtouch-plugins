@@ -1,12 +1,13 @@
 {
   "name": "homebridge-soundtouch-plugins",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Homebridge SoundTouch plugins",
   "main": "dist/index.js",
   "types": "dist/index.d.js",
   "scripts": {
-    "build": "rimraf ./dist && tsc",
-    "postinstall": "rimraf ./dist && tsc"
+    "dev": "rimraf ./dist && tsc",
+    "build": "tsc",
+    "postinstall": "tsc"
   },
   "keywords": [
     "homebridge-plugin",
