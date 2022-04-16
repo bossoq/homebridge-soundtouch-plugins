@@ -1,5 +1,5 @@
 import { PlatformAccessory, Service } from 'homebridge'
-import { ContentItem, KeyValue, SourceStatus } from 'soundtouch-api'
+import { ContentItem, KeyValue, SourceStatus } from '@bossoq/soundtouch-api'
 import { deviceIsOn } from './sound-touch-device'
 import { SoundTouchVolume } from './sound-touch-volume'
 import { SoundTouchLightbulbVolume } from './sound-touch-lightbulb-volume'

@@ -4,7 +4,7 @@ import {
   compactMap,
   Info,
   SourceStatus,
-} from 'soundtouch-api'
+} from '@bossoq/soundtouch-api'
 import { apiNotFoundWithName } from './errors'
 import { isVerboseInConfigs, stringUpperCaseFirst } from './utils'
 import {

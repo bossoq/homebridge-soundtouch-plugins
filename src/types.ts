@@ -6,7 +6,7 @@ import {
   Service,
 } from 'homebridge'
 import { Accessory } from 'hap-nodejs'
-import { API as SoundTouchAPI } from 'soundtouch-api'
+import { API as SoundTouchAPI } from '@bossoq/soundtouch-api'
 
 export interface BaseGlobalConfig {
   readonly verbose?: boolean

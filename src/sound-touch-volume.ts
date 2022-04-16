@@ -1,4 +1,4 @@
-import { KeyValue, SourceStatus } from 'soundtouch-api'
+import { KeyValue, SourceStatus } from '@bossoq/soundtouch-api'
 import { deviceIsOn } from './sound-touch-device'
 import { callbackify, HomebridgeAccessoryWrapper } from './utils'
 import { Characteristic, Service } from 'homebridge'
